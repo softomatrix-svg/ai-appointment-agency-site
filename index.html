@@ -3,277 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get 10-15 Qualified Sales Calls/Week — Without Cold Calling</title>
-    <meta name="description" content="AI-powered appointment setting that books 10-15 qualified sales calls per week. No cold calling. No chasing leads. Just conversations with ready-to-buy prospects.">
+    <title>Get 3-5 Qualified Appointments/Week — Without Cold Calling</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #fff; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; color: #1a202c; background: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
         
-        /* Hero */
-        .hero { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 120px 0 100px; text-align: center; }
-        .hero h1 { font-size: 3.2rem; font-weight: 800; margin-bottom: 20px; line-height: 1.15; max-width: 900px; margin-left: auto; margin-right: auto; }
-        .hero .subheadline { font-size: 1.4rem; margin-bottom: 40px; opacity: 0.95; max-width: 700px; margin-left: auto; margin-right: auto; }
-        .cta-button { display: inline-block; background: #ff6b6b; color: white; padding: 20px 50px; font-size: 1.3rem; font-weight: 700; text-decoration: none; border-radius: 50px; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4); }
-        .cta-button:hover { transform: translateY(-3px); box-shadow: 0 12px 35px rgba(255, 107, 107, 0.5); }
-        .cta-secondary { display: inline-block; background: transparent; color: white; padding: 18px 40px; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 50px; border: 2px solid white; margin-left: 15px; transition: all 0.3s; }
-        .cta-secondary:hover { background: white; color: #667eea; }
-        .hero-badges { margin-top: 35px; font-size: 0.95rem; opacity: 0.9; }
-        .hero-badges span { margin: 0 15px; }
+        /* HERO */
+        .hero { padding: 100px 0 80px; background: linear-gradient(180deg, #f7fafc 0%, #fff 100%); }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero h1 { font-size: 3.2rem; font-weight: 800; line-height: 1.1; color: #1a202c; margin-bottom: 24px; }
+        .hero h1 span { color: #3182ce; }
+        .hero-sub { font-size: 1.25rem; color: #4a5568; margin-bottom: 32px; line-height: 1.6; }
+        .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn-primary { display: inline-block; background: #ed8936; color: white; padding: 16px 32px; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 8px; transition: all 0.2s; box-shadow: 0 4px 14px rgba(237,137,54,0.35); }
+        .btn-primary:hover { background: #dd6b20; transform: translateY(-2px); }
+        .btn-secondary { display: inline-block; background: transparent; color: #4a5568; padding: 16px 32px; font-size: 1.1rem; font-weight: 600; text-decoration: none; border-radius: 8px; border: 2px solid #e2e8f0; transition: all 0.2s; }
+        .btn-secondary:hover { border-color: #cbd5e0; background: #f7fafc; }
+        .hero-visual { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; padding: 40px; color: white; text-align: center; box-shadow: 0 20px 40px rgba(102,126,234,0.3); }
+        .hero-visual-icon { font-size: 4rem; margin-bottom: 16px; }
+        .hero-visual-text { font-size: 1.1rem; font-weight: 600; }
+        .hero-visual-arrow { font-size: 2rem; margin: 12px 0; opacity: 0.8; }
         
-        /* Pain Points */
-        .pain { padding: 100px 0; background: #f8f9fa; }
-        .pain h2 { text-align: center; font-size: 2.3rem; margin-bottom: 15px; color: #2d3748; }
-        .pain-sub { text-align: center; color: #718096; font-size: 1.2rem; margin-bottom: 50px; }
-        .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .pain-card { background: white; padding: 35px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #e53e3e; }
-        .pain-card h3 { color: #e53e3e; margin-bottom: 12px; font-size: 1.1rem; font-weight: 700; }
-        .pain-card p { color: #4a5568; line-height: 1.7; }
+        /* PAIN */
+        .pain { padding: 100px 0; background: #f7fafc; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.25rem; font-weight: 700; color: #1a202c; margin-bottom: 12px; }
+        .section-header p { font-size: 1.15rem; color: #718096; }
+        .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+        .pain-card { background: white; padding: 32px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); display: flex; gap: 16px; align-items: flex-start; }
+        .pain-icon { font-size: 1.5rem; flex-shrink: 0; }
+        .pain-card h3 { font-size: 1rem; font-weight: 600; color: #c53030; margin-bottom: 6px; }
+        .pain-card p { font-size: 0.95rem; color: #4a5568; }
+        .pain-cta { text-align: center; margin-top: 48px; font-size: 1.25rem; font-weight: 600; color: #2d3748; }
         
-        /* Solution */
+        /* SOLUTION */
         .solution { padding: 100px 0; text-align: center; }
-        .solution h2 { font-size: 2.3rem; margin-bottom: 15px; color: #2d3748; }
-        .solution-sub { color: #718096; font-size: 1.2rem; margin-bottom: 60px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .solution h2 { font-size: 2.25rem; font-weight: 700; margin-bottom: 20px; }
+        .solution-sub { font-size: 1.15rem; color: #718096; max-width: 600px; margin: 0 auto 40px; }
+        .solution-bullets { display: inline-flex; flex-direction: column; gap: 16px; text-align: left; }
+        .solution-bullet { display: flex; align-items: center; gap: 12px; font-size: 1.1rem; color: #2d3748; }
+        .solution-bullet::before { content: "✓"; width: 24px; height: 24px; background: #c6f6d5; color: #22543d; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
         
-        /* How It Works */
-        .how-it-works { padding: 100px 0; background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%); }
-        .how-it-works h2 { text-align: center; font-size: 2.3rem; margin-bottom: 15px; }
-        .how-sub { text-align: center; color: #718096; font-size: 1.2rem; margin-bottom: 60px; }
-        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-        .step { background: white; padding: 40px 30px; border-radius: 16px; text-align: center; box-shadow: 0 8px 30px rgba(0,0,0,0.08); position: relative; }
-        .step-icon { width: 70px; height: 70px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 1.8rem; }
-        .step h3 { font-size: 1.3rem; margin-bottom: 15px; color: #2d3748; }
-        .step p { color: #718096; line-height: 1.7; }
-        .step-number { position: absolute; top: -15px; right: 20px; background: #ff6b6b; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+        /* HOW IT WORKS */
+        .how { padding: 100px 0; background: #f7fafc; }
+        .steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .step-card { background: white; padding: 40px 24px; border-radius: 16px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); position: relative; }
+        .step-num { position: absolute; top: -12px; right: 20px; width: 32px; height: 32px; background: #ed8936; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; }
+        .step-icon { font-size: 2.5rem; margin-bottom: 20px; }
+        .step-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; color: #1a202c; }
+        .step-card p { font-size: 0.9rem; color: #718096; }
         
-        /* Results */
-        .results { padding: 100px 0; background: #2d3748; color: white; text-align: center; }
-        .results h2 { font-size: 2.3rem; margin-bottom: 60px; }
-        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; max-width: 900px; margin: 0 auto; }
-        .result-item { padding: 30px; }
-        .result-number { font-size: 3.5rem; font-weight: 800; color: #48bb78; margin-bottom: 10px; }
-        .result-label { font-size: 1.1rem; opacity: 0.9; }
+        /* RESULTS */
+        .results { padding: 80px 0; background: #1a365d; color: white; text-align: center; }
+        .results h2 { font-size: 2rem; font-weight: 700; margin-bottom: 48px; }
+        .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 900px; margin: 0 auto; }
+        .result-box .num { font-size: 3.5rem; font-weight: 800; color: #48bb78; line-height: 1; margin-bottom: 8px; }
+        .result-box .label { font-size: 1rem; opacity: 0.9; }
         
-        /* Case Study */
-        .case-study { padding: 100px 0; }
-        .case-study h2 { text-align: center; font-size: 2.3rem; margin-bottom: 50px; }
-        .case-box { background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%); border: 2px solid #48bb78; border-radius: 20px; padding: 50px; max-width: 800px; margin: 0 auto; }
-        .case-box h3 { color: #22543d; font-size: 1.5rem; margin-bottom: 20px; }
-        .case-box blockquote { font-style: italic; color: #2f855a; font-size: 1.2rem; line-height: 1.8; margin-bottom: 25px; padding-left: 25px; border-left: 4px solid #48bb78; }
-        .case-author { font-weight: 700; color: #22543d; }
-        .case-meta { color: #718096; }
+        /* PROOF */
+        .proof { padding: 100px 0; }
+        .proof-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+        .testimonial { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 32px; }
+        .testimonial-stars { color: #ecc94b; font-size: 1.2rem; margin-bottom: 16px; }
+        .testimonial-text { font-size: 1.05rem; color: #4a5568; margin-bottom: 20px; line-height: 1.7; }
+        .testimonial-author { font-weight: 600; color: #2d3748; }
+        .testimonial-role { font-size: 0.9rem; color: #718096; }
         
-        /* Offer */
-        .offer { padding: 100px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center; }
-        .offer h2 { font-size: 2.5rem; margin-bottom: 20px; }
-        .offer-sub { font-size: 1.3rem; opacity: 0.95; margin-bottom: 40px; }
-        .urgency { background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); padding: 20px 40px; border-radius: 50px; display: inline-block; margin-bottom: 30px; font-weight: 600; }
-        .offer .cta-button { background: white; color: #667eea; font-size: 1.4rem; padding: 22px 55px; }
-        .offer .cta-button:hover { background: #f7fafc; }
-        .guarantee { margin-top: 30px; font-size: 1rem; opacity: 0.9; }
+        /* WHY YOU */
+        .why { padding: 80px 0; background: #f7fafc; }
+        .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; text-align: center; }
+        .why-item { background: white; padding: 40px 24px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .why-icon { font-size: 2.5rem; margin-bottom: 16px; }
+        .why-item h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; }
+        .why-item p { font-size: 0.95rem; color: #718096; }
+        
+        /* URGENCY */
+        .urgency { padding: 40px 0; background: #fffaf0; text-align: center; }
+        .urgency-badge { display: inline-block; background: #c53030; color: white; padding: 16px 32px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; }
+        
+        /* CTA */
+        .cta-section { padding: 100px 0; text-align: center; background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%); color: white; }
+        .cta-section h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 16px; }
+        .cta-section p { font-size: 1.2rem; opacity: 0.9; margin-bottom: 32px; }
+        .cta-section .btn-primary { font-size: 1.25rem; padding: 20px 48px; }
+        .guarantee { margin-top: 24px; font-size: 0.95rem; opacity: 0.8; }
         
         /* FAQ */
-        .faq { padding: 100px 0; background: #f8f9fa; }
-        .faq h2 { text-align: center; font-size: 2.3rem; margin-bottom: 50px; }
-        .faq-item { background: white; margin-bottom: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-        .faq-question { padding: 22px 30px; font-weight: 700; cursor: pointer; background: white; color: #2d3748; font-size: 1.1rem; }
-        .faq-answer { padding: 0 30px 25px; color: #718096; line-height: 1.8; }
+        .faq { padding: 80px 0; background: #f7fafc; }
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { background: white; margin-bottom: 12px; border-radius: 8px; overflow: hidden; }
+        .faq-q { padding: 20px 24px; font-weight: 600; color: #2d3748; cursor: pointer; }
+        .faq-a { padding: 0 24px 20px; color: #718096; font-size: 0.95rem; }
         
-        /* Final CTA */
-        .final-cta { padding: 100px 0; text-align: center; }
-        .final-cta h2 { font-size: 2.3rem; margin-bottom: 20px; color: #2d3748; }
-        .final-cta p { color: #718096; font-size: 1.2rem; margin-bottom: 40px; }
-        
-        footer { padding: 40px 0; text-align: center; background: #1a202c; color: #a0aec0; }
+        /* FOOTER */
+        footer { padding: 40px 0; text-align: center; background: #1a202c; color: #718096; font-size: 0.9rem; }
         
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero .subheadline { font-size: 1.1rem; }
-            .cta-secondary { margin-left: 0; margin-top: 15px; }
-            .result-number { font-size: 2.5rem; }
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .results-grid { grid-template-columns: 1fr; }
+            .why-grid { grid-template-columns: 1fr; }
+            .hero-ctas { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>Get 10–15 Qualified Sales Calls Every Week — Without Cold Calling</h1>
-            <p class="subheadline">AI-powered appointment setting that books ready-to-buy prospects directly into your calendar. You show up. We do the rest.</p>
-            <a href="#offer" class="cta-button">Book Your Free Strategy Call</a>
-            <a href="#how" class="cta-secondary">See How It Works</a>
-            <p class="hero-badges">
-                <span>✓ 10-Call Guarantee</span>
-                <span>✓ No Setup Fee If We Don't Deliver</span>
-                <span>✓ Cancel Anytime</span>
-            </p>
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h1>Get <span>3–5 Qualified Appointments</span> Every Week — Without Cold Calling</h1>
+                <p class="hero-sub">Our AI system identifies motivated prospects, starts real conversations, and books appointments directly into your calendar. You show up. We do the rest.</p>
+                <div class="hero-ctas">
+                    <a href="#book" class="btn-primary">Book a Demo Call</a>
+                    <a href="#how" class="btn-secondary">See How It Works</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-visual-icon">🤖</div>
+                <div class="hero-visual-text">AI Finds Prospects</div>
+                <div class="hero-visual-arrow">↓</div>
+                <div class="hero-visual-icon">💬</div>
+                <div class="hero-visual-text">Starts Conversations</div>
+                <div class="hero-visual-arrow">↓</div>
+                <div class="hero-visual-icon">📅</div>
+                <div class="hero-visual-text">Books Appointments</div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Pain Points -->
-    <section class="pain">
-        <div class="container">
-            <h2>You're Great at Closing. But Prospecting Is Killing You.</h2>
-            <p class="pain-sub">Here's what's actually happening:</p>
-            <div class="pain-grid">
-                <div class="pain-card">
-                    <h3>❌ WASTING HOURS ON LEAD LISTS</h3>
-                    <p>You spend more time researching than talking to prospects. Bad data. Wrong contacts. Lists that go cold before you even start.</p>
+<!-- PAIN -->
+<section class="pain">
+    <div class="container">
+        <div class="section-header">
+            <h2>Still Stuck Doing This Every Week?</h2>
+            <p>The old way isn't working anymore</p>
+        </div>
+        <div class="pain-grid">
+            <div class="pain-card">
+                <div class="pain-icon">📞</div>
+                <div>
+                    <h3>COLD CALLING FOR HOURS</h3>
+                    <p>Rejection after rejection for a handful of conversations</p>
                 </div>
-                <div class="pain-card">
-                    <h3>❌ COLD EMAILS THAT GET IGNORED</h3>
-                    <p>Generic templates get deleted. Personalization at scale is impossible. Your response rate is embarrassing.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">💸</div>
+                <div>
+                    <h3>PAYING FOR DEAD LEADS</h3>
+                    <p>Expensive Zillow leads with zero real intent</p>
                 </div>
-                <div class="pain-card">
-                    <h3>❌ CHASING GHOSTS</h3>
-                    <p>7+ touchpoints per prospect. Most never reply. Your pipeline stays empty while you follow up forever.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">👻</div>
+                <div>
+                    <h3>GETTING GHOSTED</h3>
+                    <p>Follow up 7+ times and never hear back</p>
                 </div>
-                <div class="pain-card">
-                    <h3>❌ UNQUALIFIED CALLS</h3>
-                    <p>Finally book a meeting—only to find they can't afford you or don't need you. Time wasted on tire-kickers.</p>
+            </div>
+            <div class="pain-card">
+                <div class="pain-icon">📉</div>
+                <div>
+                    <h3>INCONSISTENT PIPELINE</h3>
+                    <p>Feast or famine. Never know where next deal comes from</p>
                 </div>
             </div>
         </div>
-    </section>
+        <p class="pain-cta">👉 There's a better way.</p>
+    </div>
+</section>
 
-    <!-- Solution -->
-    <section class="solution">
-        <div class="container">
-            <h2>There's a Better Way</h2>
-            <p class="solution-sub">We built an AI system that does the heavy lifting—so you can focus on what you're actually good at: closing deals.</p>
+<!-- SOLUTION -->
+<section class="solution">
+    <div class="container">
+        <h2>Meet Your AI Appointment Engine</h2>
+        <p class="solution-sub">This isn't another "lead gen tool." This is a system that works 24/7 to fill your calendar with qualified prospects.</p>
+        <div class="solution-bullets">
+            <div class="solution-bullet">Finds high-intent prospects automatically</div>
+            <div class="solution-bullet">Starts personalized conversations at scale</div>
+            <div class="solution-bullet">Books appointments directly on your calendar</div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- How It Works -->
-    <section class="how-it-works" id="how">
-        <div class="container">
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+    <div class="container">
+        <div class="section-header">
             <h2>How It Works</h2>
-            <p class="how-sub">Four simple steps. Zero work for you.</p>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">🔍</div>
-                    <h3>We Find</h3>
-                    <p>AI identifies decision-makers who match your exact criteria—company size, role, industry, and buying signals.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">💬</div>
-                    <h3>We Reach</h3>
-                    <p>AI crafts personalized outreach for every prospect—mentioning their news, pain points, and specific needs.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">✓</div>
-                    <h3>We Qualify</h3>
-                    <p>AI handles the back-and-forth, answers questions, and filters out tire-kickers. Only serious prospects move forward.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <div class="step-icon">📅</div>
-                    <h3>We Book</h3>
-                    <p>Qualified prospects book directly on your calendar. Every call is pre-qualified, interested, and ready to buy.</p>
-                </div>
+            <p>Four steps. Zero work for you.</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <div class="step-icon">🎯</div>
+                <h3>Target</h3>
+                <p>AI identifies prospects showing real buying signals</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <div class="step-icon">💬</div>
+                <h3>Engage</h3>
+                <p>Personalized outreach via email and LinkedIn</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <div class="step-icon">✓</div>
+                <h3>Qualify</h3>
+                <p>AI filters for motivation, timeline, and budget</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">4</div>
+                <div class="step-icon">📅</div>
+                <h3>Book</h3>
+                <p>Appointments land directly on your calendar</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Results -->
-    <section class="results">
-        <div class="container">
-            <h2>Real Results from Real Clients</h2>
-            <div class="results-grid">
-                <div class="result-item">
-                    <div class="result-number">10-15</div>
-                    <div class="result-label">Qualified Calls/Week</div>
-                </div>
-                <div class="result-item">
-                    <div class="result-number">23%</div>
-                    <div class="result-label">Average Reply Rate</div>
-                </div>
-                <div class="result-item">
-                    <div class="result-number">0</div>
-                    <div class="result-label">Hours You Spend Prospecting</div>
-                </div>
-                <div class="result-item">
-                    <div class="result-number">5-10x</div>
-                    <div class="result-label">Typical ROI in 90 Days</div>
-                </div>
+<!-- RESULTS -->
+<section class="results">
+    <div class="container">
+        <h2>What You Can Expect</h2>
+        <div class="results-grid">
+            <div class="result-box">
+                <div class="num">200+</div>
+                <div class="label">Targeted Prospects/Month</div>
+            </div>
+            <div class="result-box">
+                <div class="num">30-40%</div>
+                <div class="label">Response Rate</div>
+            </div>
+            <div class="result-box">
+                <div class="num">3-5</div>
+                <div class="label">Appointments/Week</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Case Study -->
-    <section class="case-study">
-        <div class="container">
+<!-- PROOF -->
+<section class="proof">
+    <div class="container">
+        <div class="section-header">
             <h2>What Our Clients Say</h2>
-            <div class="case-box">
-                <h3>"We went from 2-3 calls per week to 12-15 consistently"</h3>
-                <blockquote>"The quality of conversations improved too—these are prospects who actually understand what we do and have budget ready. We've closed $47K in new business in our first two months. Best investment we've made."</blockquote>
-                <div class="case-author">Marketing Agency Owner</div>
-                <div class="case-meta">B2B Marketing • $5K+ retainers</div>
+        </div>
+        <div class="proof-grid">
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Booked 12 qualified appointments in 3 weeks without making a single cold call. The quality of prospects is night and day compared to paid leads."</p>
+                <div class="testimonial-author">James Mitchell</div>
+                <div class="testimonial-role">Agency Owner</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Finally replaced Zillow leads completely. We're getting 3-5 appointments every week like clockwork. Best investment we've made."</p>
+                <div class="testimonial-author">Sarah Chen</div>
+                <div class="testimonial-role">Consultant, ScaleUp Advisory</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"The ROI is insane. Paying $2,500/month and generating $20K+ in pipeline consistently. Plus I got my evenings back."</p>
+                <div class="testimonial-author">Michael Kim</div>
+                <div class="testimonial-role">CEO, GrowthLab</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Offer -->
-    <section class="offer" id="offer">
-        <div class="container">
-            <div class="urgency">⚡ Only 5 Spots Available This Month</div>
-            <h2>Ready to Fill Your Calendar?</h2>
-            <p class="offer-sub">Join the agencies and consultants using AI to book calls while they sleep.</p>
-            <a href="#" class="cta-button">Book Your Free Strategy Call</a>
-            <p class="guarantee">🛡️ 10-Call Guarantee: If we don't book 10 qualified calls in 30 days, month two is free.</p>
+<!-- WHY YOU -->
+<section class="why">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why This Works</h2>
         </div>
-    </section>
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-icon">🎯</div>
+                <h3>Built for You</h3>
+                <p>Designed specifically for agencies and consultants</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">🛠️</div>
+                <h3>Done-For-You</h3>
+                <p>We handle setup, management, and optimization</p>
+            </div>
+            <div class="why-item">
+                <div class="why-icon">⚡</div>
+                <h3>No Tech Skills</h3>
+                <p>Zero technical knowledge required</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">How quickly can we get started?</div>
-                <div class="faq-answer">From kickoff to first outreach is typically 5-7 business days. We move fast because we know you need leads now.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Do I need to provide lead lists?</div>
-                <div class="faq-answer">No. We handle all research and list building based on your specific criteria. We build custom prospect lists from scratch.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">What if the leads aren't qualified?</div>
-                <div class="faq-answer">You define the criteria. We only book calls with prospects who match. If a lead doesn't meet your standards, we'll replace them.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">Is this better than hiring an SDR?</div>
-                <div class="faq-answer">An SDR costs $60-80K/year plus benefits and can only handle limited volume. Our AI works 24/7, never calls in sick, and personalizes outreach at scale—for a fraction of the cost.</div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">What if I want to cancel?</div>
-                <div class="faq-answer">30-day notice. No long-term contracts. We earn your business every month.</div>
-            </div>
-        </div>
-    </section>
+<!-- URGENCY -->
+<section class="urgency">
+    <div class="container">
+        <div class="urgency-badge">⚡ Only Onboarding 10 Clients This Month</div>
+    </div>
+</section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Stop Prospecting. Start Closing.</h2>
-            <p>Get 10-15 qualified sales calls every week—without lifting a finger.</p>
-            <a href="#offer" class="cta-button">Book Your Free Strategy Call</a>
-        </div>
-    </section>
+<!-- CTA -->
+<section class="cta-section" id="book">
+    <div class="container">
+        <h2>Ready to Fill Your Calendar?</h2>
+        <p>Stop prospecting. Start closing.</p>
+        <a href="#" class="btn-primary">Book Your Demo Call</a>
+        <p class="guarantee">🛡️ 10-Call Guarantee: If we don't book 10 qualified calls in 30 days, month two is free</p>
+    </div>
+</section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 AI Appointment Setting Agency. All rights reserved.</p>
+<!-- FAQ -->
+<section class="faq">
+    <div class="container">
+        <div class="section-header">
+            <h2>Common Questions</h2>
         </div>
-    </footer>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q">How quickly will I see results?</div>
+                <div class="faq-a">Most clients see first appointments within 7-14 days of launch.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Do I need technical skills?</div>
+                <div class="faq-a">No — we handle the entire setup and management for you.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What if the leads aren't qualified?</div>
+                <div class="faq-a">You define the criteria. We only book calls with prospects who match your requirements.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can I cancel anytime?</div>
+                <div class="faq-a">Yes. 30-day notice. No long-term contracts.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>&copy; 2026 AI Appointment Setting Agency. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
