@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get 3-5 Qualified Appointments/Week — Without Cold Calling</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        
+        .hero { background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%); color: white; padding: 100px 0; text-align: center; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+        .hero-sub { font-size: 1.3rem; opacity: 0.9; margin-bottom: 35px; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-main { display: inline-block; background: #ff6b6b; color: white; padding: 18px 45px; font-size: 1.2rem; font-weight: 700; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 15px rgba(255,107,107,0.4); }
+        .cta-main:hover { background: #ff5252; }
+        .hero-badges { margin-top: 30px; font-size: 0.9rem; opacity: 0.8; }
+        
+        .pain { padding: 80px 0; background: #fff5f5; }
+        .pain h2 { text-align: center; font-size: 2rem; margin-bottom: 10px; color: #c53030; }
+        .pain-sub { text-align: center; color: #718096; margin-bottom: 40px; }
+        .pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .pain-item { background: white; padding: 25px; border-radius: 8px; border-left: 4px solid #fc8181; }
+        .pain-item h3 { color: #c53030; font-size: 0.95rem; margin-bottom: 10px; }
+        .pain-item p { color: #4a5568; font-size: 0.95rem; }
+        .pain-cta { text-align: center; margin-top: 40px; font-size: 1.3rem; color: #2d3748; font-weight: 600; }
+        
+        .solution { padding: 80px 0; text-align: center; }
+        .solution h2 { font-size: 2rem; margin-bottom: 15px; }
+        .solution-sub { color: #718096; max-width: 600px; margin: 0 auto 30px; }
+        
+        .how { padding: 80px 0; background: #f7fafc; }
+        .how h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+        .step { background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .step-num { width: 45px; height: 45px; background: #667eea; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: 700; }
+        .step h3 { margin-bottom: 10px; font-size: 1.1rem; }
+        .step p { color: #718096; font-size: 0.9rem; }
+        
+        .results { padding: 60px 0; background: #1a365d; color: white; text-align: center; }
+        .results h2 { font-size: 1.8rem; margin-bottom: 40px; }
+        .results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 30px; max-width: 800px; margin: 0 auto; }
+        .result-box .num { font-size: 2.5rem; font-weight: 800; color: #48bb78; }
+        .result-box .label { font-size: 0.9rem; opacity: 0.9; }
+        
+        .proof { padding: 80px 0; }
+        .proof h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; }
+        .testimonial { background: #f0fff4; border: 2px solid #48bb78; border-radius: 12px; padding: 35px; max-width: 700px; margin: 0 auto; }
+        .testimonial-text { font-style: italic; color: #22543d; font-size: 1.1rem; margin-bottom: 20px; }
+        .testimonial-author { font-weight: 700; color: #2f855a; }
+        
+        .why { padding: 60px 0; background: #f7fafc; }
+        .why h2 { text-align: center; font-size: 2rem; margin-bottom: 30px; }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 800px; margin: 0 auto; }
+        .why-item { display: flex; align-items: center; gap: 12px; }
+        .why-item span { color: #48bb78; font-size: 1.3rem; }
+        
+        .urgency { padding: 60px 0; background: #fffaf0; text-align: center; }
+        .urgency-box { background: #c53030; color: white; display: inline-block; padding: 15px 35px; border-radius: 50px; font-weight: 600; }
+        
+        .final-cta { padding: 80px 0; text-align: center; background: linear-gradient(135deg, #1a365d 0%, #2d3748 100%); color: white; }
+        .final-cta h2 { font-size: 2.2rem; margin-bottom: 15px; }
+        .final-cta p { margin-bottom: 30px; opacity: 0.9; }
+        
+        .faq { padding: 60px 0; background: #f7fafc; }
+        .faq h2 { text-align: center; font-size: 2rem; margin-bottom: 30px; }
+        .faq-item { background: white; margin-bottom: 12px; padding: 20px; border-radius: 8px; }
+        .faq-q { font-weight: 700; margin-bottom: 8px; color: #2d3748; }
+        .faq-a { color: #718096; font-size: 0.95rem; }
+        
+        footer { padding: 30px 0; text-align: center; background: #1a202c; color: #718096; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="container">
+        <h1>Get 3–5 Qualified Listing Appointments Every Week — Without Cold Calling or Paying for Leads</h1>
+        <p class="hero-sub">Our AI system identifies motivated prospects, starts real conversations, and books appointments directly into your calendar.</p>
+        <a href="#book" class="cta-main">Book a Demo Call</a>
+        <p class="hero-badges">✓ 10-Call Guarantee &nbsp;&nbsp; ✓ No Setup Fee If We Don't Deliver</p>
+    </div>
+</section>
+
+<section class="pain">
+    <div class="container">
+        <h2>Still Doing This Every Week?</h2>
+        <p class="pain-sub">The old way isn't working anymore</p>
+        <div class="pain-grid">
+            <div class="pain-item">
+                <h3>❌ COLD CALLING EXPIRED LISTINGS</h3>
+                <p>Hours of rejection for a handful of conversations</p>
+            </div>
+            <div class="pain-item">
+                <h3>❌ CHASING LEADS THAT GHOST YOU</h3>
+                <p>Follow up 7+ times and never hear back</p>
+            </div>
+            <div class="pain-item">
+                <h3>❌ PAYING FOR LEADS THAT DON'T CONVERT</h3>
+                <p>Expensive Zillow leads with no real intent</p>
+            </div>
+            <div class="pain-item">
+                <h3>❌ SPENDING HOURS PROSPECTING</h3>
+                <p>More time researching than talking to buyers</p>
+            </div>
+        </div>
+        <p class="pain-cta">👉 There's a better way.</p>
+    </div>
+</section>
+
+<section class="solution">
+    <div class="container">
+        <h2>Meet Your AI Appointment Engine</h2>
+        <p class="solution-sub">This isn't another "lead gen tool." This is a system that finds high-intent prospects, starts personalized conversations, and books appointments automatically.</p>
+    </div>
+</section>
+
+<section class="how">
+    <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Target</h3>
+                <p>AI identifies prospects showing real buying signals</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>Engage</h3>
+                <p>Personalized outreach via email and LinkedIn</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>Qualify</h3>
+                <p>AI filters for motivation, timeline, and budget</p>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <h3>Book</h3>
+                <p>Appointments land directly on your calendar</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="results">
+    <div class="container">
+        <h2>What You Can Expect</h2>
+        <div class="results-grid">
+            <div class="result-box">
+                <div class="num">200+</div>
+                <div class="label">Targeted Prospects/Month</div>
+            </div>
+            <div class="result-box">
+                <div class="num">30-40%</div>
+                <div class="label">Response Rate</div>
+            </div>
+            <div class="result-box">
+                <div class="num">3-5</div>
+                <div class="label">Appointments/Week</div>
+            </div>
+            <div class="result-box">
+                <div class="num">25%</div>
+                <div class="label">Average Close Rate</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="proof">
+    <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p class="testimonial-text">"Booked 12 qualified appointments in 3 weeks without making a single cold call. The quality of conversations is night and day compared to paid leads."</p>
+            <div class="testimonial-author">— Agency Owner, B2B Marketing</div>
+        </div>
+    </div>
+</section>
+
+<section class="why">
+    <div class="container">
+        <h2>Why This Works</h2>
+        <div class="why-grid">
+            <div class="why-item"><span>✓</span> Built for agencies & consultants</div>
+            <div class="why-item"><span>✓</span> No cold calling required</div>
+            <div class="why-item"><span>✓</span> No tech skills needed</div>
+            <div class="why-item"><span>✓</span> Done-for-you setup</div>
+            <div class="why-item"><span>✓</span> Works 24/7 automatically</div>
+            <div class="why-item"><span>✓</span> Cancel anytime</div>
+        </div>
+    </div>
+</section>
+
+<section class="urgency">
+    <div class="container">
+        <div class="urgency-box">⚡ Only Onboarding 10 Clients This Month</div>
+    </div>
+</section>
+
+<section class="final-cta" id="book">
+    <div class="container">
+        <h2>Ready to Fill Your Calendar?</h2>
+        <p>Stop prospecting. Start closing.</p>
+        <a href="#" class="cta-main">Book Your Demo Call</a>
+    </div>
+</section>
+
+<section class="faq">
+    <div class="container">
+        <h2>Common Questions</h2>
+        <div class="faq-item">
+            <div class="faq-q">Do I need tech experience?</div>
+            <div class="faq-a">No — we handle the entire setup for you.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">How fast will I see results?</div>
+            <div class="faq-a">Most clients see first appointments within 7-14 days of launch.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">What if the leads aren't qualified?</div>
+            <div class="faq-a">You define the criteria. We only book calls with prospects who match.</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 AI Appointment Setting Agency</p>
+    </div>
+</footer>
+
+</body>
+</html>
